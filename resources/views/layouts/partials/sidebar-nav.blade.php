@@ -65,6 +65,12 @@
                     <i data-feather="map-pin" class="w-5 h-5 mr-3"></i>
                     Kantor
                 </a>
+
+                <a href="{{ route('admin.audits.index') }}"
+                    class="flex items-center px-3 py-2.5 rounded-lg font-medium transition-colors {{ request()->routeIs('admin.audits.*') ? 'bg-indigo-50 text-indigo-600' : 'text-slate-600 hover:bg-slate-50 hover:text-indigo-600' }}">
+                    <i data-feather="shield" class="w-5 h-5 mr-3"></i>
+                    Audit Login
+                </a>
             @endif
 
             <a href="{{ route('management.positions.index') }}"
