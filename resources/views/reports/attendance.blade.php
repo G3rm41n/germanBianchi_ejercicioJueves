@@ -29,9 +29,16 @@
                 @endforeach
             </select>
         </div>
-        <button type="submit" class="px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">
-            Tampilkan
-        </button>
+        <div class="flex items-center gap-2">
+            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition">
+                Tampilkan
+            </button>
+            <a href="{{ route('reports.attendance.export', ['month' => $month, 'year' => $year]) }}" 
+               class="px-4 py-2 bg-emerald-600 text-white text-sm font-semibold rounded-lg hover:bg-emerald-700 transition flex items-center shadow-sm">
+                <i data-feather="download" class="w-4 h-4 mr-2"></i>
+                Exportar CSV
+            </a>
+        </div>
     </form>
 
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
