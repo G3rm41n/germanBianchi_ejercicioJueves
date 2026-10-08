@@ -78,6 +78,11 @@ class User extends Authenticatable
         return $this->hasMany(LeaveRequest::class, 'approved_by');
     }
 
+    public function loginAudits(): HasMany
+    {
+        return $this->hasMany(LoginAudit::class);
+    }
+
     /*
     |--------------------------------------------------------------------------
     | Helper Methods
